@@ -25,3 +25,10 @@ BigQuery SQL
 ![RFM Segment Summary](../screenshots/rfm_output.png)
 
 *The table summarises customer count, average recency, frequency, and monetary value per segment.*
+
+
+## Key Query Snippet
+```sql
+NTILE(5) OVER (ORDER BY recency_days DESC) AS recency_score,
+NTILE(5) OVER (ORDER BY frequency) AS frequency_score,
+NTILE(5) OVER (ORDER BY monetary) AS monetary_score
