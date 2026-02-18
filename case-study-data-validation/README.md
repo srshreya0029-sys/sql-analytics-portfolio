@@ -26,7 +26,7 @@ Created a clean analytical view (v_transactions_clean) enabling consistent reven
 
 ![RFM Segment Summary](../screenshots/null_validation_2.png)
 
-*The snapshot illustrates NULL audits, PK checks, and mismatch counts used to evaluate data reliability.*
+*The snapshot illustrates NULL audits, PK checks  used to evaluate data reliability.*
 
 ## Key Query Snippet
 ```sql
