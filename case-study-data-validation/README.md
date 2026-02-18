@@ -22,9 +22,9 @@ Created a clean analytical view (v_transactions_clean) enabling consistent reven
 ## Output Snapshot
 ![RFM Segment Summary](../screenshots/data_validation.png)
 
-![RFM Segment Summary](../screenshots/null_validation 1.png)
+![RFM Segment Summary](../screenshots/null_validation_1.png)
 
-![RFM Segment Summary](../screenshots/null_validation 2.png)
+![RFM Segment Summary](../screenshots/null_validation_2.png)
 
 *The snapshot illustrates NULL audits, PK checks, and mismatch counts used to evaluate data reliability.*
 
