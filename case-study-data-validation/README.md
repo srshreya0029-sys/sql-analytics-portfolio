@@ -14,21 +14,16 @@ BigQuery SQL
 - Quantified **NULL values across critical fields** in both customer and transaction tables to assess data completeness.
 - Validated **financial consistency** by detecting mismatches between subtotal, discount, and total values, and created a reusable clean view for downstream analysis.
 
-## Key Query Snippet
-```sql
-CREATE OR REPLACE VIEW retail_dataset.v_transactions_clean AS
-SELECT
-  t.*,
-  COALESCE(t.DeliveryMethod, 'In-Store Purchase') AS DeliveryMethod_clean,
-  (t.TotalAfterDiscount - t.DeliveryFee) AS NetSales_ExclDelivery
-FROM retail_dataset.transactions AS t;
-
 ## Key Insights
 Customer master data showed no **NULLs** across core attributes (age, loyalty tier, engagement scores), indicating strong data completeness for segmentation analysis.
 **8,890 out of 24,996 transactions** showed pricing mismatches (>1 cent), highlighting delivery fee and channel-based variations affecting total calculations.
 Created a clean analytical view (v_transactions_clean) enabling consistent revenue comparisons across channels and supporting accurate dashboards and segmentation.
 
 ## Output Snapshot
-![RFM Segment Summary](../screenshots/rfm_output.png)
+![RFM Segment Summary](../screenshots/data_validation.png)
+
+![RFM Sefment Summary](../screenshots/null_validation1.png)
+
+![RFM Sefment Summary](../screenshots/null_validation2.png)
 
 *The snapshot illustrates NULL audits, PK checks, and mismatch counts used to evaluate data reliability.*
