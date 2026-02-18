@@ -19,3 +19,14 @@ BigQuery SQL
 NTILE(5) OVER (ORDER BY recency_days DESC) AS recency_score,
 NTILE(5) OVER (ORDER BY frequency) AS frequency_score,
 NTILE(5) OVER (ORDER BY monetary) AS monetary_score
+
+## Key Insights
+
+- **“Cannot Lose” customers** showed the highest average spend ($1,216) and strong purchase frequency, indicating priority for retention campaigns.
+- **“Active Fans”** demonstrated very recent activity (6 days recency) with consistent purchase behaviour, making them ideal for loyalty and cross-sell initiatives.
+- **“Potential Churners”** displayed higher recency days and lower frequency, signalling the need for re-engagement strategies and targeted promotions.
+
+## Output Snapshot
+![RFM Segment Summary](../screenshots/rfm_output.png)
+
+*The table summarises customer count, average recency, frequency, and monetary value per segment.*
